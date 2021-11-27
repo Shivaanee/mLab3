@@ -106,7 +106,7 @@ const getClientByNumclient = (request, response) => {
 };
 
 const logout = (request, response) => {
-    if (!request.session) {
+    if (request.session.user==undefined) {
         let reply = "Please log in first";
         response.render("logout", {user: reply});
     } else {
