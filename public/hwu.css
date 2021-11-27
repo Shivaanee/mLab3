@@ -172,7 +172,7 @@ input:required {
 	border-radius: 10px;
 }
 td {
-    padding: 0px 10px;
+    padding: 0px 5px;
     border-right: 1px solid black;
 }
 #welcome {
@@ -186,4 +186,8 @@ a.header-link {
 
 a.header-link:hover {
     background-color: white;
+}
+span {
+    padding-left: 10px;
+    font-size: 15px;
 }
