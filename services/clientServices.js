@@ -73,7 +73,17 @@ const registerService = (client, callback) => {
     });
 };
 
-const searchService = function(callback) { //to be completed
+const searchService = function(callback) {
+    clientDAO.find(function(err, rows) {
+        if(err) {
+            throw err;
+        }
+        if (rows.length == 0) {
+            console.log("No clients");
+        } else {
+            return callback(null, rows);
+        }
+    });
 };
 
 const searchNumclientService = function(num_client, callback) {
@@ -86,7 +96,8 @@ const searchNumclientService = function(num_client, callback) {
             let user = null;
             return callback(null, user);
         } else {
-            return callback(null, rows[0]);
+            let client = new Client(rows[0].num_client, rows[0].society, rows[0].contact, rows[0].addres, rows[0].zipcode, rows[0].city, rows[0].phone, rows[0].fax, rows[0].max_outstanding);
+            return callback(null, rows);
         }
     });
 };
