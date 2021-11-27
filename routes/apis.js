@@ -18,8 +18,15 @@ router.post('/api/register', clientController.registerControl);
 //route for login
 router.post('/api/login', clientController.loginControl);
 
+//route for logout
+router.get('/api/logout', clientController.logout);
+
 //route for contacts
-router.get('/contacts/:num_client', clientController.getClientByNumclient);
+router.get('/api/contacts', clientController.getClientByNumclient);
+
+//route for clients
+router.get('/api/clients', clientController.getClients);
+
 
 //export router
 module.exports = router;
