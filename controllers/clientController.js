@@ -100,8 +100,8 @@ const getClientByNumclient = (request, response) => {
         });
     } else {
         console.log("No logged in user");
-        response.send("Please login first");
-        response.end();
+        let reply = "Please login first";
+        response.render("afterLoginF", {user: reply});
     }
 };
 
