@@ -1,14 +1,22 @@
 <%- include('header'); -%>    
     <div class='content'>
         <H1 ID="welcome">CONTACT</H1>
-        <span>Name: <%= clients.contact %></span>
-        <span>Address: <%= clients.addres %></span>
-        <span>Society: <%= clients.society %></span>
-        <span>Zipcode: <%= clients.zipcode %></span>
-        <span>City: <%= clients.city %></span>
-        <span>Phone: <%= clients.phone %></span>
-        <span>Fax: <%= clients.fax %></span>
-        <span>Payment: <%= clients.payment %></span>
-        <span>Outstanding: <%= clients.max_outstanding %></span>
+        <span>Name: <%= clients[0].contact %></span>
+        <br>
+        <span>Address: <%= clients[0].addres %></span>
+        <br>
+        <span>Society: <%= clients[0].society %></span>
+        <br>
+        <span>Zipcode: <%= clients[0].zipcode %></span>
+        <br>
+        <span>City: <%= clients[0].city %></span>
+        <br>
+        <span>Phone: <%= clients[0].phone %></span>
+        <br>
+        <span>Fax: <%= clients[0].fax %></span>
+        <br>
+        <span>Payment: <%= clients[0].payment %></span>
+        <br>
+        <span>Outstanding: <%= clients[0].max_outstanding %></span>
     </div>
 <%- include('footer'); -%>

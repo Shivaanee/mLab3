@@ -1,0 +1,67 @@
+<%- include('header'); -%>
+<div class="content">
+    <h1>Clients</h1>
+    <br>
+    <table id="catalog">
+        <thead>
+            <tr>
+                <th scope="col">num_client</th>
+                <th scope="col">society</th>
+                <th scope="col">contact</th>
+                <th scope="col">address</th>
+                <th scope="col">zipcode</th>
+                <th scope="col">city</th>
+                <th scope="col">phone</th>
+                <th scope="col">fax</th>
+                <th scope="col">confirmation</th>
+                <th scope="col">payment</th>
+                <th scope="col">Informations</th>
+                <th scope="col">max_outstanding</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% clients.forEach(client => { %>
+                <tr>
+                    <td>
+                        <%= client.num_client %>
+                    </td>
+                    <td>
+                        <%= client.society %>
+                    </td>
+                    <td>
+                        <%= client.contact %>
+                    </td>
+                    <td>
+                        <%= client.addres %>
+                    </td>
+                    <td>
+                        <%= client.zipcode %>
+                    </td>
+                    <td>
+                        <%= client.city %>
+                    </td>
+                    <td>
+                        <%= client.phone %>
+                    </td>
+                    <td>
+                        <%= client.fax %>
+                    </td>
+                    <td>
+                        <%= client.confirmation %>
+                    </td>
+                    <td>
+                        <%= client.payment %>
+                    </td>
+                    <td>
+                        <%= client.Informations %>
+                    </td>
+                    <td>
+                        <%= client.max_outstanding %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</div>
+<br>
+<%- include('footer'); -%>
