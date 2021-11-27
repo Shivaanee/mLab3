@@ -10,7 +10,7 @@ const loginControl = (request, response) => {
         response.render('afterLoginF', {user: reply});
     } else {
         if (request.session && request.session.user) {
-            let reply = "Already logged in";
+            let reply = "Already logged in as " + request.session.user;
             response.render('afterLoginF', {user: reply});
         } else {
             clientServices.loginService(username, password, function(err, dberr, client) {
